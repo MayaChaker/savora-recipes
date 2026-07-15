@@ -1,14 +1,21 @@
-.searchContainer {
-  margin: 20px auto;
-  width: 300px;
-  position: relative;
-}
-.input {
-  border: none;
-  border-bottom: 1px solid #e3e4dc;
-  padding: 10px 20px;
-  width: 100%;
-  outline: none;
-  font-size: 16px;
-  color: #393e46;
-}
+.hero { position: relative; min-height: 535px; padding: clamp(70px,9vw,118px) 20px 92px; display: grid; place-items: center; overflow: hidden; background: linear-gradient(90deg,rgba(13,36,26,.94),rgba(13,36,26,.68)), url('/images/savora-hero.png') center/cover; color: white; }
+.hero::before { content: ''; position: absolute; inset: 0; opacity: .18; background-image: radial-gradient(circle at 1px 1px, #fff 1px, transparent 0); background-size: 30px 30px; mask-image: linear-gradient(to bottom, black, transparent 80%); }
+.glowOne, .glowTwo { position: absolute; border-radius: 50%; filter: blur(3px); opacity: .8; }
+.glowOne { width: 340px; height: 340px; top: -160px; right: -90px; background: rgba(93,150,99,.28); }
+.glowTwo { width: 260px; height: 260px; bottom: -170px; left: 4%; background: rgba(220,139,63,.18); }
+.content { position: relative; z-index: 1; width: min(780px,100%); text-align: center; }
+.eyebrow { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 18px; color: #bfd5c3; font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.eyebrow::before { content: ''; width: 27px; height: 1px; background: var(--amber); }
+.content h1 { max-width: 760px; margin: 0 auto 18px; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2.5rem,6.4vw,5rem); line-height: .99; letter-spacing: -.04em; }
+.content > p { max-width: 610px; margin: 0 auto 34px; color: #cbd8ce; font-size: clamp(.98rem,1.8vw,1.12rem); line-height: 1.7; }
+.searchForm { width: min(660px,100%); min-height: 62px; margin: 0 auto; padding: 7px 7px 7px 20px; display: flex; align-items: center; gap: 12px; border: 1px solid rgba(255,255,255,.23); border-radius: 999px; background: white; box-shadow: 0 20px 55px rgba(0,0,0,.24); }
+.searchIcon { width: 18px; height: 18px; flex: 0 0 auto; border: 2px solid #839087; border-radius: 50%; position: relative; }
+.searchIcon::after { content: ''; position: absolute; width: 7px; height: 2px; right: -5px; bottom: -2px; border-radius: 2px; background: #839087; transform: rotate(45deg); }
+.input { min-width: 0; flex: 1; padding: 10px 5px; border: 0; outline: 0; background: transparent; color: var(--ink); font-size: .96rem; }
+.input::placeholder { color: #909891; }
+.searchForm button { min-height: 47px; padding: 0 24px; border: 0; border-radius: 999px; background: var(--amber); color: #2d261d; cursor: pointer; font-size: .85rem; font-weight: 700; transition: filter var(--transition), transform var(--transition); }
+.searchForm button:hover { filter: brightness(1.06); transform: translateY(-1px); }
+.suggestions { min-height: 24px; margin-top: 18px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 9px; color: #91aa98; font-size: .74rem; }
+.suggestions button { padding: 3px 7px; border: 0; border-bottom: 1px solid rgba(255,255,255,.25); background: transparent; color: #dbe6dd; cursor: pointer; font-size: inherit; }
+@media (max-width: 560px) { .hero { min-height: 480px; padding: 62px 18px 62px; }.searchForm { min-height: 58px; padding-left: 17px; gap: 9px; }.searchForm button { min-height: 43px; padding: 0 17px; }.content h1 { font-size: clamp(2.35rem,12vw,3.4rem); }.suggestions { gap: 6px; }.suggestions span { width: 100%; }.suggestions button { padding: 5px 7px; } }
+@media (max-width: 380px) { .searchForm button { padding: 0 13px; }.searchIcon { display: none; } }

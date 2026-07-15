@@ -1,0 +1,7 @@
+.backdrop { position: fixed; inset: 0; z-index: 100; padding: clamp(12px,3vw,32px); display: grid; place-items: center; overflow-y: auto; background: rgba(10,27,19,.76); backdrop-filter: blur(10px); animation: fadeIn 180ms ease; }
+.dialog { position: relative; width: min(860px,100%); max-height: calc(100vh - clamp(24px,6vw,64px)); overflow-y: auto; border-radius: var(--radius-lg); box-shadow: 0 30px 90px rgba(0,0,0,.35); animation: riseIn 220ms ease; scrollbar-width: thin; scrollbar-color: #aeb9af transparent; }
+.closeButton { position: sticky; top: 15px; z-index: 5; width: 44px; height: 44px; margin: 15px 15px -59px auto; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.65); border-radius: 50%; background: rgba(255,253,248,.94); color: var(--green-900); box-shadow: var(--shadow-sm); cursor: pointer; font-size: 1.65rem; line-height: 1; transition: transform var(--transition), background var(--transition); }
+.closeButton:hover { background: white; transform: rotate(4deg) scale(1.05); }
+@keyframes fadeIn { from { opacity: 0; } }
+@keyframes riseIn { from { opacity: 0; transform: translateY(18px) scale(.985); } }
+@media (max-width: 600px) { .backdrop { padding: 0; place-items: end stretch; }.dialog { width: 100%; max-height: 94vh; border-radius: 24px 24px 0 0; }.closeButton { top: 12px; margin: 12px 12px -56px auto; } }

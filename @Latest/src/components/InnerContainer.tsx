@@ -1,7 +1,8 @@
-//import React from 'react'
-import styles from "./InnerContainer.module.css";
-function InnerContainer({ children }) {
-  return <div classname={StyleSheet.InnerContainer}>{children}</div>;
+import type { ReactNode } from "react";
+import styles from "./innerContainer.module.css";
+
+function InnerContainer({ children }: { children: ReactNode }) {
+  return <div className={styles.innerContainer}>{children}</div>;
 }
 
 export default InnerContainer;
