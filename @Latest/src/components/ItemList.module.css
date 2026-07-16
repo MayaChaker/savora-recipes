@@ -1,2 +1,0 @@
-.list { margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; list-style: none; }.empty { padding: 20px; border: 1px dashed #cfd5ce; border-radius: var(--radius-sm); background: #faf9f4; color: var(--muted); font-size: .8rem; line-height: 1.6; }
-@media (max-width: 480px) { .list { grid-template-columns: 1fr; } }

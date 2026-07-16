@@ -1,2 +1,0 @@
-.parentContainer { width: min(var(--max-width),100%); margin: 0 auto; padding: clamp(56px,7vw,90px) clamp(20px,5vw,56px); }
-@media (max-width: 600px) { .parentContainer { padding-top: 44px; padding-bottom: 44px; } }
